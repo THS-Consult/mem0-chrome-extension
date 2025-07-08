@@ -1358,7 +1358,7 @@ function captureAndStoreMemory() {
         ? `Bearer ${items.access_token}`
         : `Token ${items.apiKey}`;
       
-      const userId = items.userId || items.user_id || "chrome-extension-user";
+      const userId = items.userId || items.user_id || "tim";
       
       const optionalParams = {}
       if(items.selected_org) {
@@ -1548,7 +1548,7 @@ async function handleMem0Processing(capturedText, clickSendButton = false, sourc
     });
 
     const apiKey = data.apiKey;
-    const userId = data.userId || data.user_id || "chrome-extension-user";
+    const userId = data.userId || data.user_id || "tim";
     const accessToken = data.access_token;
     const memoryEnabled = data.memory_enabled !== false; // Default to true if not set
     

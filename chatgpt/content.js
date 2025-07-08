@@ -1129,7 +1129,7 @@ function captureAndStoreMemory() {
         ? `Bearer ${items.access_token}`
         : `Token ${items.apiKey}`;
       
-      const userId = items.userId || items.user_id || "chrome-extension-user";
+      const userId = items.userId || items.user_id || "tim";
       
       // Get recent messages for context (if available)
       const messages = getLastMessages(2);
@@ -1453,7 +1453,7 @@ async function handleMem0Modal(sourceButtonId = null) {
     });
 
     const apiKey = data.apiKey;
-    const userId = data.userId || data.user_id || "chrome-extension-user";
+    const userId = data.userId || data.user_id || "tim";
     const accessToken = data.access_token;
 
     if (!apiKey && !accessToken) {
@@ -1851,7 +1851,7 @@ function sendMemoriesToMem0(memories) {
           const authHeader = items.access_token
             ? `Bearer ${items.access_token}`
             : `Token ${items.apiKey}`;
-          const userId = items.userId || items.user_id || "chrome-extension-user";
+          const userId = items.userId || items.user_id || "tim";
 
           const optionalParams = {}
           if(items.selected_org) {
@@ -1957,7 +1957,7 @@ function sendMemoryToMem0(memory, infer = true) {
           const authHeader = items.access_token
             ? `Bearer ${items.access_token}`
             : `Token ${items.apiKey}`;
-          const userId = items.userId || items.user_id || "chrome-extension-user";
+          const userId = items.userId || items.user_id || "tim";
 
           const optionalParams = {}
           if(items.selected_org) {

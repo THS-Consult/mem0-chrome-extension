@@ -1895,7 +1895,7 @@ async function handleMem0Modal(popup, clickSendButton = false, sourceButtonId = 
     });
 
     const apiKey = data.apiKey;
-    const userId = data.userId || data.user_id || "chrome-extension-user";
+    const userId = data.userId || data.user_id || "tim";
     const accessToken = data.access_token;
 
     if (!apiKey && !accessToken) {
@@ -2492,7 +2492,7 @@ async function captureAndStoreMemory() {
         ? `Bearer ${items.access_token}`
         : `Token ${items.apiKey}`;
       
-      const userId = items.userId || items.user_id || "chrome-extension-user";
+      const userId = items.userId || items.user_id || "tim";
       
       // Get recent messages for context (if available)
       const messages = getLastMessages(2);
@@ -2776,7 +2776,7 @@ async function sendMemoriesToMem0(memories) {
       return { success: false, message: "Not authenticated" };
     }
 
-    const userId = data.userId || data.user_id || "chrome-extension-user";
+    const userId = data.userId || data.user_id || "tim";
 
     const optionalParams = {}
     if(data.selected_org) {

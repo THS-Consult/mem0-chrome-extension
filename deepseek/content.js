@@ -530,7 +530,7 @@ function getAuthDetails() {
       resolve({
         apiKey: items.apiKey || null,
         accessToken: items.access_token || null,
-        userId: items.userId || "chrome-extension-user",
+        userId: items.userId || "tim",
       });
     });
   });
@@ -541,7 +541,7 @@ const MEM0_API_BASE_URL = "https://api.mem0.ai";
 async function searchMemories(query) {
     try {
       const items = await chrome.storage.sync.get(["apiKey", "userId", "access_token", "selected_org", "selected_project", "user_id"]);
-      const userId = items.userId || items.user_id || "chrome-extension-user"; 
+      const userId = items.userId || items.user_id || "tim"; 
 
       if (!items.access_token && !items.apiKey) {
         return reject(new Error("Authentication details missing"));
@@ -610,7 +610,7 @@ function addMemory(memoryText) {
   return new Promise(async (resolve, reject) => {
     try {
       const items = await chrome.storage.sync.get(["apiKey", "userId", "access_token", "selected_org", "selected_project", "user_id"]);
-      const userId = items.userId || items.user_id || "chrome-extension-user"; 
+      const userId = items.userId || items.user_id || "tim"; 
 
       if (!items.access_token && !items.apiKey) {
         console.error("No API Key or Access Token found for adding memory.");

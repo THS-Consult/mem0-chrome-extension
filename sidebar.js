@@ -186,7 +186,7 @@
           </svg>
         </button>
       </div>
-      <input type="text" id="userIdInput" class="settings-input" placeholder="Enter your user ID" value="chrome-extension-user">
+      <input type="text" id="userIdInput" class="settings-input" placeholder="Enter your user ID" value="tim">
     `;
     settingsTabContent.appendChild(userIdSection);
     
@@ -519,7 +519,7 @@
           
           // Build query parameters
           const params = new URLSearchParams();
-          const userId = data.user_id || "chrome-extension-user";
+          const userId = data.user_id || "tim";
           params.append("user_id", userId);
           params.append("page", "1");
           params.append("page_size", "20");
@@ -1215,7 +1215,7 @@
 
   function openDashboard() {
     chrome.storage.sync.get(["user_id"], function (data) {
-      const userId = data.user_id || "chrome-extension-user";
+      const userId = data.user_id || "tim";
       chrome.runtime.sendMessage({
         action: "openDashboard",
         url: `https://app.mem0.ai/dashboard/requests`,
@@ -1306,7 +1306,7 @@
         const memoryId = this.getAttribute('data-id');
         if (memoryId) {
           chrome.storage.sync.get(["user_id"], function (data) {
-            const userId = data.user_id || "chrome-extension-user";
+            const userId = data.user_id || "tim";
             chrome.runtime.sendMessage({
               action: "openDashboard",
               url: `https://app.mem0.ai/dashboard/user/${userId}?memoryId=${memoryId}`,
