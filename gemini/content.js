@@ -345,6 +345,7 @@ function addSendButtonListener() {
             infer: true,
             metadata: {
               provider: "Gemini",
+              interface: "Chrome-Extension",
             },
             ...optionalParams,
           }),
@@ -512,6 +513,7 @@ async function handleMem0Processing(capturedText, clickSendButton = false) {
         infer: true,
         metadata: {
           provider: "Gemini",
+          interface: "Chrome-Extension",
         },
         ...optionalParams,
       }),
@@ -2047,6 +2049,7 @@ async function handleMem0Modal(sourceButtonId = null) {
         infer: true,
         metadata: {
           provider: "Gemini",
+          interface: "Chrome-Extension",
         },
         ...optionalParams,
       }),

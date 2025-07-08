@@ -1156,6 +1156,7 @@ function captureAndStoreMemory() {
           infer: true,
           metadata: {
             provider: "ChatGPT",
+            interface: "Chrome-Extension",
           },
           ...optionalParams,
         }),
@@ -1531,6 +1532,7 @@ async function handleMem0Modal(sourceButtonId = null) {
         infer: true,
         metadata: {
           provider: "ChatGPT",
+          interface: "Chrome-Extension",
         },
         ...optionalParams,
       }),
@@ -1873,6 +1875,7 @@ function sendMemoriesToMem0(memories) {
               infer: true,
               metadata: {
                 provider: "ChatGPT",
+                interface: "Chrome-Extension",
               },
               ...optionalParams,
             }),
@@ -1979,6 +1982,7 @@ function sendMemoryToMem0(memory, infer = true) {
               infer: infer,
               metadata: {
                 provider: "ChatGPT",
+                interface: "Chrome-Extension",
               },
               ...optionalParams,
             }),
